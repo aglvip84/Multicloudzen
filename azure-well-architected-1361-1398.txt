@@ -1,0 +1,1478 @@
+Reliability and Network Virtual
+Appliances (NVA)
+Article • 11/30/2022
+
+Network Virtual Appliances (NVA) are typically used to control the flow of traffic
+between network segments classified with different security levels, for example between
+a perimeter network (also known as DMZ, demilitarized zone, and screened subnet) and
+the public internet.
+Examples of NVAs include:
+Network firewalls
+Layer-4 reverse-proxies
+Internet Protocol Security (IPsec) Virtual Private Network (VPN) endpoints
+Web-based reverse-proxies
+Internet proxies
+Layer-7 load balancers
+For more information about Network Virtual Appliances, reference Deploy highly
+available NVAs.
+To understand how NVAs support a reliable workload, reference the following topics:
+Scenario: Route traffic through an NVA
+Scenario: Route traffic through NVAs by using custom settings
+Use L7 load balancers
+
+Checklist
+Have you configured your Network Virtual Appliances (NVA) with reliability in mind?
+＂ NVAs should be deployed within a Landing Zone or solution-level Virtual Network.
+＂ For Virtual Wide Area Network (VWAN) topologies, deploy the NVAs to a separate
+Virtual Network (such as, NVA VNet). Connect the NVA to the regional Virtual WAN
+Hub and to the Landing Zones that require access to NVAs.
+＂ For non-Virtual Wide Are Network (WAN) topologies, deploy the third-party NVAs
+in the central Hub Virtual Network (VNet).
+
+Configuration recommendations
+
+Consider the following recommendations to optimize reliability when configuring your
+Network Virtual Appliances (NVA):
+Recommendation
+
+Description
+
+NVAs should be deployed within a Landing Zone or
+solution-level Virtual Network.
+
+If third-party NVAs are required for
+inbound HTTP/S connections, deploy
+NVAs together with the applications
+that they're protecting and exposing to
+the internet.
+
+For Virtual Wide Area Network (VWAN) topologies,
+deploy the NVAs to a separate Virtual Network (such
+as, NVA VNet). Connect the NVA to the regional Virtual
+
+If third-party NVAs are required for
+east-west or south-north traffic
+protection and filtering, reference
+
+WAN Hub and to the Landing Zones that require access
+
+Scenario: Route traffic through an NVA.
+
+to NVAs.
+For non-Virtual Wide Area Network (WAN) topologies,
+
+If third-party NVAs are required for
+
+deploy the third-party NVAs in the central Hub Virtual
+Network (VNet).
+
+east-west or south-north traffic
+protection and filtering, deploy the
+third-party NVAs in the central Hub
+Virtual Network.
+
+Next step
+Cost optimization and Network Virtual Appliances (NVA)
+
+Cost optimization and Network Virtual
+Appliances (NVA)
+Article • 11/30/2022
+
+Network Virtual Appliances (NVA) are typically used to control the flow of traffic
+between network segments classified with different security levels, for example between
+a perimeter network (also known as DMZ, demilitarized zone, and screened subnet) and
+the public internet.
+Examples of NVAs include:
+Network firewalls
+Layer-4 reverse-proxies
+Internet Protocol Security (IPsec) Virtual Private Network (VPN) endpoints
+Web-based reverse-proxies
+Internet proxies
+Layer-7 load balancers
+For more information about Network Virtual Appliances, reference Deploy highly
+available NVAs.
+
+Design considerations
+When deploying a Network Virtual Appliance (NVA), keep in mind the following design
+considerations:
+There's a difference between using a third-party app (NVA) and using an Azure
+native service (Firewall or Application Gateway).
+With managed Platform as a Service (PaaS) services such as Azure Firewall or
+Application Gateway, Microsoft handles the management of the service and the
+underlying infrastructure. Using NVAs, which usually have to be deployed on
+Virtual Machines or Infrastructure as a Service (IaaS), the customer has to handle
+the management operations (such as patching and updating) of that Virtual
+Machine and the appliance on top. Managing third-party services also involves
+using specific vendor tools making integration difficult.
+
+Next step
+Operational excellence and Network Virtual Appliances (NVA)
+
+Operational excellence and Network
+Virtual Appliances (NVA)
+Article • 11/30/2022
+
+Network Virtual Appliances (NVA) are typically used to control the flow of traffic
+between network segments classified with different security levels, for example between
+a perimeter network (also known as DMZ, demilitarized zone, and screened subnet) and
+the public internet.
+Examples of NVAs include:
+Network firewalls
+Layer-4 reverse-proxies
+Internet Protocol Security (IPsec) Virtual Private Network (VPN) endpoints
+Web-based reverse-proxies
+Internet proxies
+Layer-7 load balancers
+For more information about Network Virtual Appliances, reference Deploy highly
+available NVAs.
+To understand how NVAs promote operational excellence, reference the following
+topics:
+Scenario: Route traffic through an NVA
+Scenario: Route traffic through NVAs by using custom settings
+Gateway Load Balancer
+
+Checklist
+Have you configured your Network Virtual Appliances (NVA) with operational
+excellence in mind?
+＂ NVAs should be deployed within a Landing Zone or solution-level Virtual Network.
+＂ For Virtual Wide Area Network (VWAN) topologies, deploy the NVAs to a separate
+Virtual Network (such as, NVA VNet). Connect the NVA to the regional Virtual WAN
+Hub and to the Landing Zones that require access to NVAs.
+＂ For non-Virtual Wide Are Network (WAN) topologies, deploy the third-party NVAs
+in the central Hub Virtual Network (VNet).
+
+Configuration recommendations
+Consider the following recommendations to optimize reliability when configuring your
+Network Virtual Appliances (NVA):
+Recommendation
+
+Description
+
+NVAs should be deployed within a Landing Zone or
+
+If third-party NVAs are required for
+
+solution-level Virtual Network.
+
+inbound HTTP/S connections, deploy
+NVAs together with the applications
+that they're protecting and exposing to
+the internet.
+
+For Virtual Wide Area Network (VWAN) topologies,
+deploy the NVAs to a separate Virtual Network (such
+
+If third-party NVAs are required for
+east-west or south-north traffic
+
+as, NVA VNet). Connect the NVA to the regional Virtual
+
+protection and filtering, reference
+
+WAN Hub and to the Landing Zones that require access
+to NVAs.
+
+Scenario: Route traffic through an NVA.
+
+For non-Virtual Wide Area Network (WAN) topologies,
+deploy the third-party NVAs in the central Hub Virtual
+
+If third-party NVAs are required for
+east-west or south-north traffic
+
+Network (VNet).
+
+protection and filtering, deploy the
+third-party NVAs in the central Hub
+Virtual Network.
+
+Next step
+Reliability and Network connectivity
+
+Reliability and Network connectivity
+Article • 11/30/2022
+
+Network connectivity includes three Azure models for private network connectivity:
+VNet injection
+VNet service endpoints
+Private Link
+VNet injection applies to services that are deployed specifically for you, such as:
+Azure Kubernetes Service (AKS) nodes
+SQL Managed Instance
+Virtual Machines
+These resources connect directly to your virtual network.
+Virtual Network (VNet) service endpoints provide secure and direct connectivity to
+Azure services. These service endpoints use an optimized route over the Azure network.
+Service endpoints enable private IP addresses in the VNet to reach the endpoint of an
+Azure service without needing a public IP address on the VNet.
+Private Link provides dedicated access using private IP addresses to Azure PaaS
+instances, or custom services behind an Azure Load Balancer Standard.
+
+Design considerations
+Network connectivity includes the following design considerations related to a reliable
+workload:
+Use Private Link, where available, for shared Azure PaaS services. Private Link is
+generally available for several services and is in public preview for numerous ones.
+Access Azure PaaS services from on-premises through ExpressRoute private
+peering.
+Use either virtual network injection for dedicated Azure services or Azure Private
+Link for available shared Azure services. To access Azure PaaS services from onpremises when virtual network injection or Private Link isn't available, use
+ExpressRoute with Microsoft peering. This method avoids transiting over the public
+internet.
+
+Use virtual network service endpoints to secure access to Azure PaaS services from
+within your virtual network. Use virtual network service endpoints only when
+Private Link isn't available and there are no concerns with unauthorized movement
+of data.
+Service Endpoints don't allow a PaaS service to be accessed from on-premises
+networks. Private Endpoints do.
+To address concerns about unauthorized movement of data with service endpoints,
+use network-virtual appliance (NVA) filtering. You can also use virtual network
+service endpoint policies for Azure Storage.
+The following native network security services are fully managed services.
+Customers don't incur the operational and management costs associated with
+infrastructure deployments, which can become complex at scale:
+Azure Firewall
+Application Gateway
+Azure Front Door
+PaaS services are typically accessed over public endpoints. The Azure platform
+provides capabilities to secure these endpoints or make them entirely private.
+You can also use third-party network-virtual appliances (NVAs) if the customer
+prefers them for situations where native services don't satisfy specific
+requirements.
+
+Checklist
+Have you configured Network connectivity with reliability in mind?
+＂ Don't implement forced tunneling to enable communication from Azure to Azure
+resources.
+＂ Unless you use network virtual appliance (NVA) filtering, don't use virtual network
+service endpoints when there are concerns about unauthorized movement of data.
+＂ Don't enable virtual network service endpoints by default on all subnets.
+
+Next step
+Cost optimization and Network connectivity
+
+Cost optimization and Network
+connectivity
+Article • 11/30/2022
+
+Network connectivity includes three Azure models for private network connectivity:
+VNet injection
+VNet service endpoints
+Private Link
+VNet injection applies to services that are deployed specifically for you, such as:
+Azure Kubernetes Service (AKS) nodes
+SQL Managed Instance
+Virtual Machines
+These resources connect directly to your virtual network.
+Virtual Network (VNet) service endpoints provide secure and direct connectivity to
+Azure services. These service endpoints use an optimized route over the Azure network.
+Service endpoints enable private IP addresses in the VNet to reach the endpoint of an
+Azure service without needing a public IP address on the VNet.
+Private Link provides dedicated access using private IP addresses to Azure PaaS
+instances, or custom services behind an Azure Load Balancer Standard.
+
+Design considerations
+Network connectivity includes the following design considerations related to cost
+optimization:
+Running cost of services: The services are metered. Pay for service itself and
+consumption on service.
+VNet Peering cost: Consider the consequences of putting all resources in a single
+VNet to save costs. It also prevents the infrastructure from growing. The VNet can
+eventually reach a point where new resources don't fit anymore.
+For two peered VNets using a private endpoint: Only the private endpoint access is
+billed and not the VNet peering cost.
+Azure Firewall is also metered: Pay for the instance and for usage. The same
+applies to load balancers.
+
+Checklist
+Have you configured Network connectivity with cost optimization in mind?
+＂ Select SKU for service so that it does the job required, which allows the customer to
+grow as the workload evolves.
+＂ For the Load balancer, select two SKUs: Basic (free) and Standard (paid).
+＂ For App Gateway, select Basic or V2.
+＂ For Gateways, limit throughput and performance.
+＂ Select DDoS Standard.
+
+Configuration recommendations
+Consider the following recommendation for cost optimization when configuring
+Network connectivity:
+Recommendation
+
+Description
+
+For the Load balancer, select
+
+Microsoft recommends Standard because it has richer
+
+two SKUs: Basic (free) and
+Standard (paid).
+
+capabilities, such as:
+- Outbound rules
+- Granular network security configuration
+- Monitoring
+Standard provides a Service Level Agreement (SLA) and can be
+deployed in Availability Zones. Capabilities in Basic are limited.
+
+Select DDoS Standard.
+
+Depending on the workload and usage patterns, Standard can
+provide useful protection. Otherwise, you can use Basic for
+small customers.
+
+Next step
+Operational excellence and Network connectivity
+
+Operational excellence and Network
+connectivity
+Article • 11/30/2022
+
+Network connectivity includes three Azure models for private network connectivity:
+VNet injection
+VNet service endpoints
+Private Link
+VNet injection applies to services that are deployed specifically for you, such as:
+Azure Kubernetes Service (AKS) nodes
+SQL Managed Instance
+Virtual Machines
+These resources connect directly to your virtual network.
+Virtual Network (VNet) service endpoints provide secure and direct connectivity to
+Azure services. These service endpoints use an optimized route over the Azure network.
+Service endpoints enable private IP addresses in the VNet to reach the endpoint of an
+Azure service without needing a public IP address on the VNet.
+Private Link provides dedicated access using private IP addresses to Azure PaaS
+instances, or custom services behind an Azure Load Balancer Standard.
+
+Design considerations
+Network connectivity includes the following design considerations related to
+operational excellence:
+Use Private Link, where available, for shared Azure PaaS services. Private Link is
+generally available for several services and is in public preview for numerous ones.
+Access Azure PaaS services from on-premises through ExpressRoute private
+peering.
+Use either virtual network injection for dedicated Azure services or Azure Private
+Link for available shared Azure services. To access Azure PaaS services from onpremises when virtual network injection or Private Link isn't available, use
+ExpressRoute with Microsoft peering. This method avoids transiting over the public
+internet.
+
+Use virtual network service endpoints to secure access to Azure PaaS services from
+within your virtual network. Use virtual network service endpoints only when
+Private Link isn't available and there are no concerns with unauthorized movement
+of data.
+Service Endpoints don't allow a PaaS service to be accessed from on-premises
+networks. Private Endpoints do.
+To address concerns about unauthorized movement of data with service endpoints,
+use network-virtual appliance (NVA) filtering. You can also use virtual network
+service endpoint policies for Azure Storage.
+The following native network security services are fully managed services.
+Customers don't incur the operational and management costs associated with
+infrastructure deployments, which can become complex at scale:
+Azure Firewall
+Application Gateway
+Azure Front Door
+PaaS services are typically accessed over public endpoints. The Azure platform
+provides capabilities to secure these endpoints or make them entirely private.
+You can also use third-party network-virtual appliances (NVAs) if the customer
+prefers them for situations where native services don't satisfy specific
+requirements.
+
+Checklist
+Have you configured Network connectivity with operational excellence in mind?
+＂ Don't implement forced tunneling to enable communication from Azure to Azure
+resources.
+＂ Unless you use network virtual appliance (NVA) filtering, don't use virtual network
+service endpoints when there are concerns about unauthorized movement of data.
+＂ Don't enable virtual network service endpoints by default on all subnets.
+
+Next step
+Reliability and Azure Virtual Network
+
+Reliability and Azure Virtual Network
+Article • 11/30/2022
+
+A fundamental building block for your private network, Azure Virtual Network enables
+Azure resources to securely communicate with each other, the internet, and on-premises
+networks.
+Key features of Azure Virtual Network include:
+Communication with Azure resources
+Communication with the internet
+Communication with on-premises resources
+Network traffic filtering
+For more information, reference What is Azure Virtual Network?
+To understand how Azure Virtual Network supports a reliable workload, reference the
+following topics:
+Tutorial: Move Azure VMs across regions
+Quickstart: Create a virtual network using the Azure portal
+Virtual Network – Business Continuity
+
+Design considerations
+The Virtual Network (VNet) includes the following design considerations for a reliable
+Azure workload:
+Overlapping IP address spaces across on-premises and Azure regions creates
+major contention challenges.
+While a Virtual Network address space can be added after creation, this process
+requires an outage if the Virtual Network is already connected to another Virtual
+Network through peering. An outage is necessary because the Virtual Network
+peering is deleted and re-created.
+Resizing of peered Virtual Networks is in public preview
+
+(August 20, 2021).
+
+Some Azure services do require dedicated subnets, such as:
+Azure Firewall
+Azure Bastion
+Virtual Network Gateway
+Subnets can be delegated to certain services to create instances of that service
+within the subnet.
+
+Azure reserves five IP addresses within each subnet, which should be factored in
+when sizing Virtual Networks and encompassed subnets.
+
+Checklist
+Have you configured Azure Virtual Network with reliability in mind?
+＂ Use Azure DDoS Standard Protection Plans to protect all public endpoints hosted
+within customer Virtual Networks.
+＂ Enterprise customers must plan for IP addressing in Azure to ensure there's no
+overlapping IP address space across considered on-premises locations and Azure
+regions.
+＂ Use IP addresses from the address allocation for private internets (Request for
+Comment (RFC) 1918).
+＂ For environments with limited private IP addresses (RFC 1918) availability, consider
+using IPv6.
+＂ Don't create unnecessarily large Virtual Networks (for example: /16 ) to ensure
+there's no unnecessary waste of IP address space.
+＂ Don't create Virtual Networks without planning the required address space in
+advance.
+＂ Don't use public IP addresses for Virtual Networks, especially if the public IP
+addresses don't belong to the customer.
+＂ Use VNet Service Endpoints to secure access to Azure Platform as a Service (PaaS)
+services from within a customer VNet.
+＂ To address data exfiltration concerns with Service Endpoints, use Network Virtual
+Appliance (NVA) filtering and VNet Service Endpoint Policies for Azure Storage.
+＂ Don't implement forced tunneling to enable communication from Azure to Azure
+resources.
+＂ Access Azure PaaS services from on-premises through ExpressRoute Private Peering.
+＂ To access Azure PaaS services from on-premises networks when VNet injection or
+Private Link aren't available, use ExpressRoute with Microsoft Peering when there
+are no data exfiltration concerns.
+＂ Don't replicate on-premises perimeter network (also known as DMZ, demilitarized
+zone, and screened subnet) concepts and architectures into Azure.
+＂ Ensure the communication between Azure PaaS services that have been injected
+into a Virtual Network is locked down within the Virtual Network using user-defined
+routes (UDRs) and network security groups (NSGs).
+＂ Don't use VNet Service Endpoints when there are data exfiltration concerns, unless
+NVA filtering is used.
+＂ Don't enable VNet Service Endpoints by default on all subnets.
+
+Configuration recommendations
+Consider the following recommendations to optimize reliability when configuring an
+Azure Virtual Network:
+Recommendation
+
+Description
+
+Don't create Virtual Networks without planning the
+
+Adding address space will cause an
+
+required address space in advance.
+
+outage once a Virtual Network is
+connected through Virtual Network
+peering.
+
+Use VNet Service Endpoints to secure access to Azure
+Platform as a Service (PaaS) services from within a
+
+Only when Private Link isn't available
+and when there are no data
+
+customer VNet.
+
+exfiltration concerns.
+
+Access Azure PaaS services from on-premises through
+
+Use either VNet injection for
+
+ExpressRoute Private Peering.
+
+dedicated Azure services or Azure
+Private Link for available shared Azure
+services.
+
+To access Azure PaaS services from on-premises
+
+Avoids transit over the public internet.
+
+networks when VNet injection or Private Link aren't
+available, use ExpressRoute with Microsoft Peering when
+there are no data exfiltration concerns.
+Don't replicate on-premises perimeter network (also
+
+Customers can get similar security
+
+known as DMZ, demilitarized zone, and screened
+
+capabilities in Azure as on-premises,
+
+subnet) concepts and architectures into Azure.
+
+but the implementation and
+architecture will need to be adapted to
+the cloud.
+
+Ensure the communication between Azure PaaS services
+that have been injected into a Virtual Network is locked
+
+Azure PaaS services that have been
+injected into a Virtual Network still
+
+down within the Virtual Network using user-defined
+routes (UDRs) and network security groups (NSGs).
+
+perform management plane
+operations using public IP addresses.
+
+Next step
+Operational excellence and Azure Virtual Network
+
+Operational excellence and Azure
+Virtual Network
+Article • 11/30/2022
+
+A fundamental building block for your private network, Azure Virtual Network enables
+Azure resources to securely communicate with each other, the internet, and on-premises
+networks.
+Key features of Azure Virtual Network include:
+Communication with Azure resources
+Communication with the internet
+Communication with on-premises resources
+Network traffic filtering
+For more information, reference What is Azure Virtual Network?
+To understand how Azure Virtual Network supports operational excellence, reference
+the following topics:
+Monitoring Azure Virtual Network
+Monitoring Azure Virtual Network data reference
+Azure Virtual Network concepts and best practices
+
+Design considerations
+The Virtual Network (VNet) includes the following design considerations for operational
+excellence:
+Overlapping IP address spaces across on-premises and Azure regions creates
+major contention challenges.
+While a Virtual Network address space can be added after creation, this process
+requires an outage if the Virtual Network is already connected to another Virtual
+Network through peering. An outage is necessary because the Virtual Network
+peering is deleted and re-created.
+Resizing of peered Virtual Networks is in public preview
+
+(August 20, 2021).
+
+Some Azure services do require dedicated subnets, such as:
+Azure Firewall
+Azure Bastion
+Virtual Network Gateway
+
+Subnets can be delegated to certain services to create instances of that service
+within the subnet.
+Azure reserves five IP addresses within each subnet, which should be factored in
+when sizing Virtual Networks and encompassed subnets.
+
+Checklist
+Have you configured Azure Virtual Network with operational excellence in mind?
+＂ Use Azure DDoS Standard Protection Plans to protect all public endpoints hosted
+within customer Virtual Networks.
+＂ Enterprise customers must plan for IP addressing in Azure to ensure there's no
+overlapping IP address space across considered on-premises locations and Azure
+regions.
+＂ Use IP addresses from the address allocation for private internets (Request for
+Comment (RFC) 1918).
+＂ For environments with limited private IP addresses (RFC 1918) availability, consider
+using IPv6.
+＂ Don't create unnecessarily large Virtual Networks (for example: /16 ) to ensure
+there's no unnecessary waste of IP address space.
+＂ Don't create Virtual Networks without planning the required address space in
+advance.
+＂ Don't use public IP addresses for Virtual Networks, especially if the public IP
+addresses don't belong to the customer.
+＂ Use VNet Service Endpoints to secure access to Azure Platform as a Service (PaaS)
+services from within a customer VNet.
+＂ To address data exfiltration concerns with Service Endpoints, use Network Virtual
+Appliance (NVA) filtering and VNet Service Endpoint Policies for Azure Storage.
+＂ Don't implement forced tunneling to enable communication from Azure to Azure
+resources.
+＂ Access Azure PaaS services from on-premises through ExpressRoute Private Peering.
+＂ To access Azure PaaS services from on-premises networks when VNet injection or
+Private Link aren't available, use ExpressRoute with Microsoft Peering when there
+are no data exfiltration concerns.
+＂ Don't replicate on-premises perimeter network (also known as DMZ, demilitarized
+zone, and screened subnet) concepts and architectures into Azure.
+＂ Ensure the communication between Azure PaaS services that have been injected
+into a Virtual Network is locked down within the Virtual Network using user-defined
+routes (UDRs) and network security groups (NSGs).
+
+＂ Don't use VNet Service Endpoints when there are data exfiltration concerns, unless
+NVA filtering is used.
+＂ Don't enable VNet Service Endpoints by default on all subnets.
+
+Configuration recommendations
+Consider the following recommendations for operational excellence when configuring
+an Azure Virtual Network:
+Recommendation
+
+Description
+
+Don't create Virtual Networks without planning the
+required address space in advance.
+
+Adding address space will cause an
+outage once a Virtual Network is
+connected through Virtual Network
+peering.
+
+Use VNet Service Endpoints to secure access to Azure
+
+Only when Private Link isn't available
+
+Platform as a Service (PaaS) services from within a
+customer VNet.
+
+and when there are no data
+exfiltration concerns.
+
+Access Azure PaaS services from on-premises through
+ExpressRoute Private Peering.
+
+Use either VNet injection for
+dedicated Azure services or Azure
+Private Link for available shared Azure
+services.
+
+To access Azure PaaS services from on-premises
+
+Avoids transit over the public internet.
+
+networks when VNet injection or Private Link aren't
+available, use ExpressRoute with Microsoft Peering when
+there are no data exfiltration concerns.
+Don't replicate on-premises perimeter network (also
+
+Customers can get similar security
+
+known as DMZ, demilitarized zone, and screened
+subnet) concepts and architectures into Azure.
+
+capabilities in Azure as on-premises,
+but the implementation and
+architecture will need to be adapted to
+the cloud.
+
+Ensure the communication between Azure PaaS services
+that have been injected into a Virtual Network is locked
+down within the Virtual Network using user-defined
+
+Azure PaaS services that have been
+injected into a Virtual Network still
+perform management plane
+
+routes (UDRs) and network security groups (NSGs).
+
+operations using public IP addresses.
+
+Next step
+Reliability and ExpressRoute
+
+Reliability and Azure Load Balancer
+Article • 11/30/2022
+
+Load balancing refers to evenly distributing load (incoming network traffic) across a
+group of backend resources or servers. With Azure Load Balancer, load-balance traffic to
+and from virtual machines and cloud resources, and in cross-premises virtual networks.
+You can scale your applications and create highly available services with Azure Load
+Balancer. It supports both inbound and outbound scenarios. Load balancer provides low
+latency and high throughput.
+Key benefits include:
+Load balance internal and external traffic to Azure virtual machines.
+Increase availability by distributing resources within and across zones.
+Configure outbound connectivity for Azure virtual machines.
+Use health probes to monitor load-balanced resources.
+For more information, reference Why use Azure Load Balancer?
+To understand how Azure Load Balancer supports a reliable workload, reference the
+following topics:
+Improve application scalability and resiliency by using Azure Load Balancer
+Load Balancer and Availability Zones
+High availability ports overview
+
+Checklist
+Have you configured Azure Load Balancer with reliability in mind?
+＂ For production workloads, use the Standard Stock Keeping Units (SKU).
+
+Configuration recommendations
+Consider the following recommendation to optimize reliability when configuring an
+Azure Load Balancer:
+Recommendation
+
+Description
+
+For production workloads, use the
+Standard Stock Keeping Units (SKU).
+
+Basic load balancers don't have a Service Level Agreement
+(SLA). The Standard SKU supports Availability Zones.
+
+Next step
+Operational excellence and Azure Load Balancer
+
+Operational excellence and Azure Load
+Balancer
+Article • 03/01/2023
+
+Load balancing refers to evenly distributing load (incoming network traffic) across a
+group of backend resources or servers. With Azure Load Balancer, load-balance traffic to
+and from virtual machines and cloud resources, and in cross-premises virtual networks.
+You can scale your applications and create highly available services with Azure Load
+Balancer. It supports both inbound and outbound scenarios. Load balancer provides low
+latency and high throughput.
+Key benefits include:
+Load balance internal and external traffic to Azure virtual machines.
+Increase availability by distributing resources within/across Azure regions and
+zones.
+Configure outbound connectivity for Azure virtual machines.
+Use health probes to monitor load-balanced resources.
+For more information, reference Why use Azure Load Balancer?
+To understand how Azure Load Balancer supports operational excellence, reference the
+following topics:
+Load Balancer health probes
+Standard load balancer diagnostics with metrics, alerts, and resource health
+Using Insights to monitor and configure your Azure Load Balancer
+
+Checklist
+Have you configured Azure Load Balancer with operational excellence in mind?
+＂ For production workloads, use the Standard Stock Keeping Units (SKU).
+
+Configuration recommendations
+Consider the following recommendation for operational excellence when configuring an
+Azure Load Balancer:
+Recommendation
+
+Description
+
+Recommendation
+
+Description
+
+For production workloads, use
+
+Basic load balancers don't have a Service Level Agreement (SLA).
+
+the Standard Stock Keeping
+Units (SKU).
+
+The Standard SKU supports Availability Zones and multi-region
+load balancing.
+
+Next step
+Reliability and Traffic Manager
+
+Reliability and Traffic Manager
+Article • 11/30/2022
+
+Traffic Manager is a Domain Name System (DNS)-based traffic load balancer. This
+service allows you to distribute traffic to your public-facing applications across the
+global Azure regions. Traffic Manager also provides your public endpoints with high
+availability and quick responsiveness.
+Features include:
+Increase application availability
+Improve application performance
+Service maintenance without downtime
+Combine hybrid applications
+Distribute traffic for complex deployments
+For more information, reference What is Traffic Manager?
+To learn how Traffic Manager supports a reliable workload, reference the following
+articles:
+Enhance your service availability and data locality by using Azure Traffic Manager
+Using load-balancing services in Azure
+Disaster recovery using Azure DNS and Traffic Manager
+
+Checklist
+Have you configured Traffic Manager with reliability in mind?
+＂ If the Time to Live (TTL) interval of the DNS record is too long, consider adjusting
+the health probe timing or DNS record TTL.
+＂ Implement a custom page to use as a health check for your Traffic Manager.
+＂ Evaluate the three different traffic routing methods.
+＂ Consider nested Traffic Manager profiles.
+
+Configuration recommendations
+Consider the following recommendations to optimize reliability when configuring Traffic
+Manager:
+Recommendation
+
+Description
+
+Recommendation
+
+Description
+
+If the Time to Live
+
+When a backend becomes unavailable, Traffic Manager won't fail over to
+
+(TTL) interval of the
+DNS record is too
+long, consider
+
+another region immediately. There will be a time interval where clients can't
+be served. The length of this interval depends on the time settings of the
+health probe (probe interval and the number of unhealthy responses
+
+adjusting the health
+probe timing or
+
+allowed). If the resulting interval is still too large for the scenario, consider
+switching to Azure Front Door for global load balancing.
+
+DNS record TTL.
+Implement a
+
+A common practice is to implement a custom page within your application
+
+custom page to use
+as a health check
+for your Traffic
+
+(for example: /health.aspx ). Using this path for monitoring, you can do
+application-specific checks, such as checking performance counters or
+
+Manager.
+
+verifying database availability. Based on these custom checks, the page
+returns an appropriate HTTPS status code.
+
+Evaluate the three
+different traffic
+
+Traffic Manager supports three traffic-routing methods to determine how
+to route network traffic to the various service endpoints. Traffic Manager
+
+routing methods.
+
+applies the traffic-routing method to each DNS query it receives. The
+traffic-routing method determines which endpoint is returned in the DNS
+response. The customer should be aware of these endpoints and the
+differences in routing between endpoints.
+
+Consider nested
+
+Each Traffic Manager profile specifies a single traffic-routing method. There
+
+Traffic Manager
+
+are scenarios that require more sophisticated traffic routing than the
+
+profiles.
+
+routing provided by a single Traffic Manager profile. You can nest Traffic
+Manager profiles to combine the benefits of more than one traffic-routing
+method. Nested profiles allow you to override the default Traffic Manager
+behavior to support larger, more complex application deployments.
+
+Next step
+Operational excellence and Traffic Manager
+
+Operational excellence and Traffic
+Manager
+Article • 11/30/2022
+
+Traffic Manager is a Domain Name System (DNS)-based traffic load balancer. This
+service allows you to distribute traffic to your public-facing applications across the
+global Azure regions. Traffic Manager also provides your public endpoints with high
+availability and quick responsiveness.
+Features include:
+Increase application availability
+Improve application performance
+Service maintenance without downtime
+Combine hybrid applications
+Distribute traffic for complex deployments
+For more information, reference What is Traffic Manager?
+To learn how Traffic Manager supports operational excellence, reference the following
+articles:
+Troubleshooting degraded state on Azure Traffic Manager
+Traffic Manager endpoint monitoring
+Traffic Manager metrics and alerts
+
+Checklist
+Have you configured Traffic Manager with operational excellence in mind?
+＂ If the Time to Live (TTL) interval of the DNS record is too long, consider adjusting
+the health probe timing or DNS record TTL.
+
+Configuration recommendations
+Consider the following recommendation for operational excellence when configuring
+Traffic Manager:
+Recommendation
+
+Description
+
+Recommendation
+
+Description
+
+If the Time to Live
+(TTL) interval of the
+DNS record is too
+
+When a backend becomes unavailable, Traffic Manager won't fail over to
+another region immediately. There will be a time interval where clients
+can't be served. The length of this interval depends on the time settings of
+
+long, consider
+adjusting the health
+
+the health probe (probe interval and the number of unhealthy responses
+allowed). If the resulting interval is still too large for the scenario, consider
+
+probe timing or
+DNS record TTL.
+
+switching to Azure Front Door for global load balancing.
+
+Next step
+Cost optimization and IP addresses
+
+Cost optimization and IP addresses
+Article • 11/30/2022
+
+IP services are a collection of IP address-related services that enable communication in
+an Azure Virtual Network. Public and private IP addresses are used in Azure for
+communication between resources. The communication with resources can occur in a
+private Azure Virtual Network and the public internet.
+Key features include:
+Public IP addresses
+Public IP address prefixes
+Private IP addresses
+Routing preference
+Routing preference unmetered
+For more information, reference What is Azure Virtual Network IP Services?
+To understand how IP services support a cost-optimized workload, reference the
+following articles:
+IP addresses pricing
+Create, change, or delete an Azure public IP address
+Routing over public Internet (ISP network)
+
+Checklist
+Have you configured IP addresses with cost optimization in mind?
+＂ PIPs (Public IPs) are free until used. Static PIPs are paid even when not assigned to
+resources.
+
+Configuration recommendations
+Consider the following recommendation for cost optimization when configuring IP
+addresses:
+Recommendation
+
+Description
+
+Recommendation
+
+Description
+
+PIPs (Public IPs) are free
+until used. Static PIPs are
+paid even when not
+
+There's a difference in billing for regular and static public IP
+addresses. Develop a process to look for orphan network interface
+cards (NICs) and PIPs that aren't being used in production and
+
+assigned to resources.
+
+non-production.
+
+Next step
+Cost optimization and Log Analytics
+
+Cost optimization and Log Analytics
+Article • 03/24/2023
+
+Log Analytics is a tool in the Azure portal used to edit and run log queries with data in
+Azure Monitor Logs. You can write a query that returns a set of records. Then, use
+features of Log Analytics to sort, filter, and analyze them. Alternately, write a more
+advanced query to do statistical analysis. Visualize the results in a chart to identify a
+particular trend.
+For more information, reference Overview of Log Analytics in Azure Monitor.
+To understand how Log Analytics supports cost optimization, reference Manage usage
+and costs with Azure Monitor Logs. This article includes:
+Estimating the costs to manage your environment
+Viewing Log Analytics usage on your Azure bill
+Understand your usage and optimizing your pricing tier
+
+Design considerations
+Log Analytics workspace includes the following design considerations:
+Consider how long to retain data on Log Analytics:
+Data ingested into Log Analytics workspace can be retained at no additional
+charge up to the first 31 days. Consider general aspects to configure the Log
+Analytics workspace level default retention. Consider specific needs to configure
+data retention by data type that can be as low as four days. Example: Usually,
+performance data doesn't need to be retained longer, instead, security logs may
+need to be retained longer.
+Consider exporting data for long-term retention or auditing purposes:
+Data retained for audit purposes may be exported to a cheaper storage type. Refer
+to Log Analytics workspace data export in Azure Monitor (preview).
+
+Checklist
+Have you configured Log Analytics with cost optimization in mind?
+＂ Consider adoption of the Commitment Tiers pricing model to the Log Analytics
+workspace.
+
+＂ Evaluate usage of daily cap to limit the daily ingestion for your workspace.
+＂ Understand Log Analytics workspace usage.
+＂ Evaluate possible data ingestion volume reducing.
+
+Configuration recommendations
+Consider the following recommendation for cost optimization when configuring Log
+Analytics:
+Recommendation
+
+Description
+
+Consider adoption
+of the
+
+The usage of Commitment Tiers enables saving as much as 30% compared
+
+Commitment Tiers
+pricing model to
+
+usage above the reservation level is billed at the Pay-As-You-Go rate. Refer
+
+the Log Analytics
+
+Reservations. Use the Log Analytics usage and estimated cost page to
+analyze data usage and calculate possible Commitment Tiers. Note: Azure
+
+workspace.
+
+to Pay-As-You-Go pricing. Commitment Tiers starts at 100 GB/day and any
+to Changing pricing tier about how to change the pricing tier to Capacity
+
+Defender (Security Center) billing includes 500 MB/node/day allocation against
+the security data types. Take it into consideration when calculating
+Commitment Tiers.
+Evaluate daily cap
+usage to limit the
+
+Daily cap is used to manage an unexpected increase in data volume. Use
+daily cap when you want to limit unplanned charges for your workspace. Use
+
+daily ingestion for
+
+care with this configuration as it can cause some data to be unwritten on
+
+your workspace.
+
+Log Analytics workspace if the daily cap is reached. This configuration can
+impact services whose functionality may depend on the availability of up-todate data in the workspace. Refer to Set the Daily Cap about how to set the
+daily cap in Application Insights. Note: If you have a workspace-based
+Application Insights, use daily cap in workspace to limit ingestion and costs
+instead of using the cap in Application Insights.
+
+Understand Log
+Analytics
+
+When Log Analytics workspace usage is higher than expected, consider the
+troubleshooting guide and the Understanding ingested data volume guide
+
+workspace usage.
+
+to understand the unexpected behavior.
+
+Evaluate possible
+
+Refer to Tips for reducing data volume documentation to help configure
+
+data ingestion
+
+data ingestion properly.
+
+volume reducing.
+
+Next step
+Security and Application Insights
+
+Security and Application Insights
+Article • 03/24/2023
+
+Application Insights is a feature of Azure Monitor. This feature provides extensible
+application performance management (APM) and monitoring for live web apps.
+Key features include:
+Supports a wide variety of platforms, including .NET, Node.js, Java, and Python.
+Works for apps hosted on-premises, hybrid, or on any public cloud.
+Integrates with DevOps processes.
+Has connection points to many development tools.
+Can monitor and analyze customer data from mobile apps by integrating with
+Visual Studio App Center.
+For more information, reference Application Insights overview.
+
+Checklist
+Have you configured Application Insights with security in mind?
+＂ Review instances where customer data is captured in your application.
+
+Configuration recommendations
+Consider the following security recommendation when configuring Application Insights:
+Recommendation
+
+Description
+
+Review instances where
+
+We don't recommend collecting customer data in Application Insights,
+
+customer data is
+captured in your
+
+although it can be unavoidable. It's up to you and your company to
+determine the strategy you'll use to handle your private data.
+
+application.
+
+Next step
+Cost optimization and Application Insights
+
+Cost optimization and Application
+Insights
+Article • 03/24/2023
+
+Application Insights is a feature of Azure Monitor. This feature provides extensible
+application performance management (APM) and monitoring for live web apps.
+Key features include:
+Supports a wide variety of platforms, including .NET, Node.js, Java, and Python.
+Works for apps hosted on-premises, hybrid, or on any public cloud.
+Integrates with DevOps processes.
+Has connection points to many development tools.
+Can monitor and analyze customer data from mobile apps by integrating with
+Visual Studio App Center.
+For more information, reference Application Insights overview.
+
+Design considerations
+Application Insights includes the following design considerations for cost optimization:
+Consider using sampling to reduce the amount of data that's sent:
+Sampling is a feature in Application Insights. It's a recommended way to reduce
+data traffic, data, and storage costs. Refer to Sampling in Application Insights.
+Consider turning off collection for unneeded modules:
+On configuration files, you can enable or disable data modules and initializers for
+tracking data from your applications. Refer to Application Insights for web pages.
+Consider limiting Asynchronous JavaScript and XML (AJAX) call tracing:
+AJAX calls can be limited to reduce costs. Refer to Application Insights for web
+pages, which explains the fields and its configurations.
+
+Checklist
+Have you configured Application Insights with cost optimization in mind?
+＂ Evaluate usage of daily cap to limit the daily ingestion for your workspace.
+
+＂ Use sampling in Azure Application Insights to reduce data traffic, data costs, and
+storage costs, while preserving a statistically correct analysis of application data.
+
+Configuration recommendations
+Consider the following recommendations for cost optimization when configuring
+Application Insights:
+Recommendation
+
+Description
+
+Evaluate daily cap
+
+Daily cap is used to manage an unexpected increase in data volume. Use
+
+usage to limit the
+daily ingestion for
+
+daily cap when you want to limit unplanned charges for your workspace. Use
+care with this configuration as it can cause some data to be unwritten on
+
+your workspace.
+
+Log Analytics workspace if the daily cap is reached. This configuration can
+impact services whose functionality may depend on the availability of up-todate data in the workspace. Refer to Set the Daily Cap about how to set the
+daily cap in Application Insights. Note: If you have a workspace-based
+Application Insights, use the daily cap in workspace to limit ingestion and
+costs instead of using the cap in Application Insights.
+
+Next step
+Operational excellence and Application Insights
+
+Operational excellence and Application
+Insights
+Article • 03/24/2023
+
+Application Insights is a feature of Azure Monitor. This feature provides extensible
+application performance management (APM) and monitoring for live web apps.
+Key features include:
+Supports a wide variety of platforms, including .NET, Node.js, Java, and Python.
+Works for apps hosted on-premises, hybrid, or on any public cloud.
+Integrates with DevOps processes.
+Has connection points to many development tools.
+Can monitor and analyze customer data from mobile apps by integrating with
+Visual Studio App Center.
+For more information, reference Application Insights overview.
+
+Checklist
+Have you configured Application Insights with operational excellence in mind?
+＂ Configure Application Insights to monitor the availability and responsiveness of
+your web application.
+＂ Be aware that Application Insights can be used to monitor deployed sites and
+services on-premises (or on an Azure Virtual Machine (VM)).
+＂ Evaluate Java codeless application monitoring for your Java-based application
+development stack.
+＂ Configure sampling in Application Insights.
+＂ Record custom events and metrics from sites and services in Application Insights.
+＂ Use Application Insights to ingest existing log traces from common libraries, such
+as ILogger , Nlog , and log4Net .
+＂ Become familiar with the Application Insights quotas and limits.
+＂ Review the need for custom analysis. Use Application Insights data with tools such
+as Azure Dashboards or Power BI.
+＂ Separate data across Application Insights resources.
+
+Configuration recommendations
+
+Consider the following recommendations for operational excellence when configuring
+Application Insights:
+Recommendation
+
+Description
+
+Configure
+Application
+
+After you've deployed your application, you can set up recurring tests to
+monitor availability and responsiveness. Application Insights sends web
+
+Insights to
+monitor the
+
+requests to your application at regular intervals from points around the
+world. It can alert you if your application isn't responding or if it responds
+
+availability and
+responsiveness of
+your web
+
+too slowly.
+
+application.
+Evaluate Java
+codeless
+
+Java codeless application monitoring is all about simplicity. There are no
+code changes. You can enable the Java agent through a couple of
+
+application
+
+configuration changes. The Java agent works in any environment and allows
+
+monitoring for
+your Java-based
+
+you to monitor all your Java applications. No matter if you're running your
+Java apps on Virtual Machines, on-premises, in Azure Kubernetes Service
+
+application
+
+(AKS), on Windows, or Linux, the Java 3.0 agent will monitor your app.
+
+development
+stack.
+Configure
+sampling in
+
+Ingestion sampling operates at the point where the data from your web
+servers, browsers, and devices reaches the Application Insights service
+
+Application
+
+endpoints. Although it doesn't reduce the data sent from your app, it does
+
+Insights.
+
+reduce the amount processed, retained, and charged by Application Insights.
+Use this type of sampling if your app often goes above its monthly quota.
+Use ingestion sampling if you don't have access to the Software
+Development Kit (SDK)-based types of sampling.
+
+Record custom
+
+Use Application Insights to record domain-specific custom events and
+
+events and metrics
+
+metrics from your site or service. For example: number-of-active-baskets or
+
+from sites and
+services in
+
+product-lines-out-of-stock.
+
+Application
+Insights.
+Use Application
+
+If you're already using a logging framework such as ILogger , Nlog , log4Net ,
+
+Insights to ingest
+existing log traces
+
+or System.Diagnostics.Trace , we recommend sending your diagnostic
+
+from common
+
+tracing logs using AzureLogHandler in OpenCensus Python for Azure
+
+libraries, such as
+ILogger , Nlog ,
+
+Monitor. You can explore and search these logs, which are merged with the
+other log files from your application. Merging the log files allows you to
+
+and log4Net .
+
+identify traces associated with each user request and correlate them with
+
+tracing logs to Application Insights. For Python applications, send diagnostic
+
+other events and exception reports.
+
+Recommendation
+
+Description
+
+Become familiar
+with the
+
+This information can influence your sampling model and your strategy for
+separating Application Insights resources.
+
+Application
+Insights quotas
+and limits.
+Review the need
+for custom
+
+There are several available options to analyze your Application Insights data.
+For example, you can create a dashboard in the Azure portal that includes
+
+analysis. Use
+
+tiles visualizing data from multiple Azure resources across different resource
+
+Application
+Insights data with
+
+groups and subscriptions. Alternatively, you can use Power BI to analyze
+data combined with data from other sources and share insights.
+
+tools such as
+Azure Dashboards
+or Power BI.
+Separate data
+
+It's important to consider when to share a single Application Insights
+
+across Application
+Insights resources.
+
+resource and when to create a new one. For example, you should use a
+single resource for application components that you deploy together, a
+single Team develops, or that the same set of DevOps or ITOps users
+manages. You should use a separate resource for different environments.
+
+Next step
+Operational excellence and Application Insights
+
+Implementing recommendations
+Article • 11/30/2022
+
+Overview
+The purpose of this document is to provide a guide for incorporating the
+recommendations generated by the Microsoft Azure Well-Architected Review and Azure
+Advisor into a new or established operational process for continuous workload
+improvement.
+
+Assess
+
+Monitor
+
+Integrate
+
+Implement
+
+Triage
+
+Assess workload
+This first step in the Well-Architected Recommendation Process is to conduct an
+assessment of your workload. The Microsoft Azure Well-Architected Review tool
+generates a set of recommendations through a guided assessment based on the
+Microsoft Well-Architected Framework. This tool also has the ability to pull in Azure
+Advisor recommendations based on an Azure subscription or resource group. At the
+end of the assessment, there is an option to export these recommendations into a CSV
+file that can then be used to incorporate them into the operational process for the
+workload.
+７ Note
+
+When using the Microsoft Azure Well-Architected Review tool, it's important to
+Sign in and select the Azure subscription or resource group that contains your
+workload. This will ensure that only the relevant Azure Advisor recommendations
+are included when exporting the CSV.
+
+Integrate recommendations
+The goal of this stage is to establish a backlog of work items either through a manual or
+an automated process that is based on the recommendations generated by the
+assessment. The process and tooling for managing the backlog for your workload
+should be well-defined based on your cloud operating model.
+７ Note
+The Microsoft Cloud Adoption Framework for Azure is proven guidance that's
+designed to help you create and implement the business and technology strategies
+necessary for your organization to succeed in the cloud. This guidance can help you
+define the cloud operating model that governs the operational process for your
+workload.
+If you're using a DevOps approach for your operational process, Microsoft has provided
+example scripts that will automate the import of the recommendations from the WellArchitected Review exported CSV into a new Azure DevOps or GitHub
+
+project within
+
+your existing organization.
+Download example import scripts at DevOps Tooling for Well-Architected
+Recommendation Process .
+
+Triage backlog
+Now that the recommendations have been added to the backlog, the workload owners
+and key stakeholders should prioritize, then triage the recommendations in a weekly
+standup meeting with the workload team. Next, they assign recommendations to a
+specific owner, postpone, or dismiss. When assigned to a specific owner, the
+recommendation should be tracked until resolved and weekly, or monthly reminders are
+sent to the assignee.
+When going through this process, it's recommended to align responsibilities across
+teams by developing a cross-team matrix that identifies responsible, accountable,
+consulted, and informed (RACI) parties. Some of the key benefits of this exercise include:
+
+Assisting teams in charting roles and responsibilities in a consistent manner
+Assisting teams with development of implementation tool kits
+Clarifying individual and departmental roles, and responsibilities
+Identifying accountabilities
+Eliminating misunderstandings and encouraging teamwork
+Reducing duplication of effort
+Establishing consults and informs resulting in better communication
+
+Implement work items
+This stage of the process is focused on working through the backlog of
+recommendations. How you organize this work will depend on your cloud operating
+model. For example, an Agile-based process would have an emphasis on sprint planning
+paired with frequent stand ups so that progress can be tracked and reported.
+
+Monitor progress
+This stage of the process is to monitor improvements to a workload relative to the
+Microsoft Well-Architected Framework through each iteration. It's important to establish
+a baseline based on the Microsoft Azure Well-Architected Review and Azure Advisor so
+that you can track improvements back to key recommendations and metrics.
+The Azure Advisor Score is a key metric that is available for tracking and socializing
+improvements during this continuous process.
+
+
